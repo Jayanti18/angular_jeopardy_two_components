@@ -1,0 +1,30 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+</div>
+
+<!-- display the question, category, point value, and users score -->
+
+<b>The Question:</b> {{questionInfo?.question}} <br>
+<b>The Category:</b> {{questionInfo?.category?.title}} <br>
+<b>The Value:</b> {{questionInfo?.value}} <br>
+<b>Your Score:</b> {{usersScore}} <br>
+
+<!-- 
+  
+  give a way for the user to provide an answer to the question 
+  and submit the answer
+
+  after they submit usig the button it should check to see if the answer is right, if right add point value to users score otherwise subtract the value from the score.
+
+  the checking of the answer is happening becuase (click)="checkAnswer()" pn the button
+
+-->
+<!-- 
+  [(ngModel)] is doing the two way data binding here
+  it ties the input field to the property in the ts (controller) file for the component
+ -->
+
+<input type="text" [(ngModel)]="usersAnswer"> <button (click)="tellParentToCheckAnswer()">submit your answer</button>
